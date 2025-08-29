@@ -1,0 +1,20 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="96" fill="#dc2626"/>
+  
+  <!-- TV Screen -->
+  <rect x="32" y="48" width="128" height="96" rx="8" fill="white"/>
+  <rect x="40" y="56" width="112" height="80" rx="4" fill="#1f2937"/>
+  
+  <!-- Play button in center -->
+  <polygon points="80,76 80,116 116,96" fill="#dc2626"/>
+  
+  <!-- TV stand -->
+  <rect x="80" y="144" width="32" height="8" rx="4" fill="white"/>
+  <rect x="64" y="152" width="64" height="8" rx="4" fill="white"/>
+  
+  <!-- Signal waves -->
+  <path d="M140 36C150 46 150 66 140 76" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M148 28C162 42 162 70 148 84" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M156 20C174 38 174 78 156 96" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

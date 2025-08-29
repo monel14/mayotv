@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de Logo MAYO TV</title>
+</head>
+<body>
+    <canvas id="logoCanvas" width="200" height="200" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadLogo()">Télécharger logo.png</button>
+    
+    <script>
+        const canvas = document.getElementById('logoCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Couleurs MAYO TV
+        const primaryColor = '#5490a8';
+        const darkColor = '#3e7489';
+        const lightColor = '#7ab4c7';
+        
+        // Fond avec la couleur primaire
+        ctx.fillStyle = primaryColor;
+        ctx.fillRect(0, 0, 200, 200);
+        
+        // Créer un écran de TV
+        ctx.fillStyle = darkColor;
+        ctx.fillRect(30, 60, 140, 100);
+        
+        ctx.fillStyle = 'white';
+        ctx.fillRect(40, 70, 120, 80);
+        
+        // Texte MAYO
+        ctx.fillStyle = primaryColor;
+        ctx.font = 'bold 24px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('MAYO', 100, 110);
+        
+        // Texte TV
+        ctx.font = '16px Arial';
+        ctx.fillText('TV', 100, 135);
+        
+        // Antennes
+        ctx.strokeStyle = darkColor;
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        
+        ctx.beginPath();
+        ctx.moveTo(80, 60);
+        ctx.lineTo(60, 30);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(120, 60);
+        ctx.lineTo(140, 30);
+        ctx.stroke();
+        
+        // Boutons
+        ctx.fillStyle = lightColor;
+        ctx.beginPath();
+        ctx.arc(180, 80, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(180, 100, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(180, 120, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        function downloadLogo() {
+            const link = document.createElement('a');
+            link.download = 'logo.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Conversion automatique vers fichier
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.download = 'logo.png';
+            link.href = canvas.toDataURL();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }, 1000);
+    </script>
+</body>
+</html>
