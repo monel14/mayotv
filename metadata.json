@@ -1,0 +1,5 @@
+{
+  "name": "IPTV Player",
+  "description": "A simple IPTV player built with React and HLS.js",
+  "requestFramePermissions": []
+}
